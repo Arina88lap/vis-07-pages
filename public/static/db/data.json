@@ -1,7 +1,19 @@
 {
-  "items": [
-    {"id": 1, "title": "Docker", "description": "Упаковка приложения и хранение данных в томе."},
-    {"id": 2, "title": "GitHub Actions", "description": "Автоматическая проверка и сборка образов."},
-    {"id": 3, "title": "GitHub Pages", "description": "Публикация статической сборки React."}
-  ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

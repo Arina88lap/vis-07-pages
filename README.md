@@ -1,20 +1,13 @@
-# Материалы практики
+# React и GitHub Pages
+
+Практическая работа № 7. Арина.
 
 ```sh
 npm ci
 npm run serve
 ```
 
-Во втором терминале выполните `npm run dev` и откройте `http://127.0.0.1:8407`. В development React запрашивает `/api/data` через прокси Vite и JSON Server.
-
-Для сборки и локального просмотра production выполните следующие команды.
-
-```sh
-npm run build
-npm run preview
-```
-
-Путь приложения определяется из `homepage` в `package.json`. В production React получает [JSON из ветки gh-pages](https://raw.githubusercontent.com/Arina88lap/vis-07-pages/gh-pages/static/db/data.json). Vite включает каталог `public` в `dist`, а скрипт сборки копирует `index.html` в `404.html` для прямых ссылок на клиентские маршруты.
+Во втором терминале запустите `npm start`. JSON Server отвечает на `http://localhost:3001/api/data`. React на `http://localhost:3000` получает данные и выводит `Hello world`.
 
 ## Публикация
 
@@ -22,4 +15,6 @@ npm run preview
 npm run deploy
 ```
 
-`predeploy` собирает приложение. `gh-pages` отправляет содержимое `dist` в ветку `gh-pages` на `origin`. В настройках GitHub Pages выбраны **Deploy from a branch**, ветка **gh-pages** и каталог **/ (root)**. Готовый сайт доступен по адресу `https://arina88lap.github.io/vis-07-pages/`.
+После сборки скрипт копирует JSON в `build/static/db/data.json` и создаёт `build/404.html`. Пакет `gh-pages` публикует каталог `build` в ветку `gh-pages`. На GitHub Pages выбран корень этой ветки. В production React читает JSON из этой ветки по прямому адресу.
+
+[Опубликованное приложение](https://arina88lap.github.io/vis-07-pages/)
