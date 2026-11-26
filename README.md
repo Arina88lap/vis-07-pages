@@ -5,7 +5,7 @@ npm ci
 npm run serve
 ```
 
-Во втором терминале выполните `npm run dev` и откройте `http://127.0.0.1:8407`. В development React запрашивает `/api/items` через прокси Vite и JSON Server.
+Во втором терминале выполните `npm run dev` и откройте `http://127.0.0.1:8407`. В development React запрашивает `/api/data` через прокси Vite и JSON Server.
 
 Для сборки и локального просмотра production выполните следующие команды.
 

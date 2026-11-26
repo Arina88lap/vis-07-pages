@@ -5,7 +5,7 @@ import './styles.css';
 
 const base = import.meta.env.BASE_URL;
 const publicData = 'https://raw.githubusercontent.com/Arina88lap/vis-07-pages/gh-pages/static/db/data.json';
-const url = import.meta.env.DEV ? '/api/items' : publicData;
+const url = import.meta.env.DEV ? '/api/data' : publicData;
 
 function Item({ items }) {
   const { id } = useParams();
@@ -34,7 +34,7 @@ function App() {
     return () => controller.abort();
   }, []);
 
-  return <main><h1>Материалы практики</h1>{error ? <p role="alert">Не удалось загрузить материалы.</p> : items === null ? <p>Загрузка…</p> : <Routes>
+  return <main><h1>Материалы практики</h1><p>Арина · {import.meta.env.DEV ? 'JSON Server' : 'GitHub Pages'}</p>{error ? <p role="alert">Не удалось загрузить материалы.</p> : items === null ? <p>Загрузка…</p> : <Routes>
     <Route path="/" element={<ul>{items.map((item) => <li key={item.id}><Link to={`/items/${item.id}`}>{item.title}</Link><p>{item.description}</p></li>)}</ul>} />
     <Route path="/items/:id" element={<Item items={items} />} />
     <Route path="*" element={<p>Страница не найдена. <Link to="/">Все материалы</Link></p>} />
