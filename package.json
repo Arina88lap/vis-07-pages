@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://arina88lap.github.io/vis-07-pages/",
   "scripts": {
     "serve": "json-server --watch public/static/db/data.json --routes server/routes.json --port 3001 --host 127.0.0.1",
     "dev": "vite --host 127.0.0.1 --port 8407 --strictPort",

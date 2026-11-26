@@ -4,7 +4,8 @@ import { BrowserRouter, Link, Route, Routes, useParams } from 'react-router-dom'
 import './styles.css';
 
 const base = import.meta.env.BASE_URL;
-const url = import.meta.env.DEV ? '/api/items' : `${base}static/db/data.json`;
+const publicData = 'https://raw.githubusercontent.com/Arina88lap/vis-07-pages/gh-pages/static/db/data.json';
+const url = import.meta.env.DEV ? '/api/items' : publicData;
 
 function Item({ items }) {
   const { id } = useParams();
