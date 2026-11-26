@@ -1,7 +1,3 @@
 {
-  "items": [
-    {"id": 1, "title": "Docker", "description": "Упаковка приложения и хранение данных в томе."},
-    {"id": 2, "title": "GitHub Actions", "description": "Автоматическая проверка и сборка образов."},
-    {"id": 3, "title": "GitHub Pages", "description": "Публикация статической сборки React."}
-  ]
+  "greeting": "Hello world"
 }
